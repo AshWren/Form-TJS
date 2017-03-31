@@ -14,25 +14,19 @@
         <!--form-->
         <form action="" method="POST" id="frm">
             <div class="form-group">
-                <input type="text" id="art-img" name="art-img" placeholder="art image" />
+                <input type="text" id="img-src" name="img-src" placeholder="img src" />
             </div>
             <div class="form-group">
-                <input type="text" id="art-name" name="art-name" placeholder="art name" />
+                <input type="text" id="item-name" name="item-name" placeholder="item name" />
             </div>
             <div class="form-group">
-                <input type="text" id="name-link" name="name-link" placeholder="name link" />
+                <input type="text" id="description" name="description" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam auctor dui eget porttitor. Praesent non ultrices ipsum, id egestas ex. Maecenas id turpis tempor, bibendum metus id, convallis ligula. Pellentesque vitae fermentum elit, sit amet mattis mauris." />
             </div>
             <div class="form-group">
-                <input type="text" id="artist-link" name="artist-link" placeholder="artist link" />
+                <input type="text" id="item-price" name="item-price" placeholder="item price" />
             </div>
             <div class="form-group">
                 <input type="text" id="artist-name" name="artist-name" placeholder="artist name" />
-            </div>
-            <div class="form-group">
-                <input type="text" id="keywords" name="keywords" placeholder="keywords" />
-            </div>
-            <div class="form-group">
-                <textarea name="description" id="description" placeholder="description"></textarea>
             </div>
             <div class="form-group">
                 <button id="btnAdd" class="btn btn-default">Add</button>
@@ -52,15 +46,21 @@
             <div class="container">
                 <article class="row">
                     <div class="col-sm-6">
-                        <img src="{{art-img}}" alt="{{art-name}}" class="img-thumbnail" />
+                        <img src="{{img-src}}" alt="{{item-name}}" class="img-thumbnail" />
                     </div>
                     <div class="col-sm-6">
-                        <h2><a href="{{name-link}}">{{art-name}}</a></h2>
-                        <h3>by <a href="{{artist-link}}">{{artist-name}}</a></h3>
-                        <h4>{{keywords}}</h4>
-                        <p>
-                            {{description}}
-                        </p>
+                        <h1>{{item-name}}</h1>
+                        <h3>{{description}}</h3>
+                        <h2>{{item-price}}</h2>
+                        <div class="row artist">
+                            <div class="col-sm-3">
+                                <img src="http://lorempixel.com/50/50/people" alt="Random People">
+                            </div>
+                            <div class="col-sm-9">
+                                <h4 class="createdBy">Created By</h4>
+                                <h3 class="artist">{{artist-name}}</h3>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
